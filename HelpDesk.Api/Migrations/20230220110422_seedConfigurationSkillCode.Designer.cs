@@ -4,6 +4,7 @@ using HelpDesk.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HelpDesk.Api.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20230220110422_seedConfigurationSkillCode")]
+    partial class seedConfigurationSkillCode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,23 +146,6 @@ namespace HelpDesk.Api.Migrations
                     b.HasKey("SkillCode");
 
                     b.ToTable("Ref_Skill_Codes");
-
-                    b.HasData(
-                        new
-                        {
-                            SkillCode = 1,
-                            Description = "Hardware Repair"
-                        },
-                        new
-                        {
-                            SkillCode = 2,
-                            Description = "Database Dev"
-                        },
-                        new
-                        {
-                            SkillCode = 3,
-                            Description = "Backend Dev"
-                        });
                 });
 
             modelBuilder.Entity("HelpDesk.Api.Models.Staff_Skills", b =>

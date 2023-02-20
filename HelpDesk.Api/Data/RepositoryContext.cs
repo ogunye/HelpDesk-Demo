@@ -12,6 +12,8 @@ namespace HelpDesk.Api.Data
         {
             modelBuilder.Entity<Staff_Skills>()
                 .HasKey(ss => new { ss.StaffId, ss.SkillCode });
+
+            modelBuilder.ApplyConfiguration(new SkillCodeConfiguration());
         }
 
 
