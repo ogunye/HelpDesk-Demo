@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using HelpDesk_Domain.Models;
 
 namespace HelpDesk.Api.Repository.Interfaces
 {

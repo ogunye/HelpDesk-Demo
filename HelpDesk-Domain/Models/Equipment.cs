@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelpDesk_Domain.BaseEntity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelDomain.Entities
+namespace HelpDesk_Domain.Models
 {
-    public class Equipment
+    public class Equipment : AuditableEntity
     {
-        public int Id { get; set; }
-        
         public int EquipmentTypeCode { get; set; }
 
         [DataType(DataType.Date)]

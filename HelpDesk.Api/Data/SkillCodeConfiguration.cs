@@ -25,6 +25,7 @@ namespace HelpDesk.Api.Data
                     SkillCode = 3,
                     Description = "Backend Dev"
                 }
+
             );
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using HelDomain.Entities;
 using HelpDesk.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
